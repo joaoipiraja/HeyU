@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E3604B928A2D89800031F2D /* HeyuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3604B828A2D89800031F2D /* HeyuApp.swift */; };
+		4E3604BB28A2D89800031F2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3604BA28A2D89800031F2D /* ContentView.swift */; };
+		4E3604BD28A2D89900031F2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E3604BC28A2D89900031F2D /* Assets.xcassets */; };
+		4E3604C028A2D89900031F2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E3604BF28A2D89900031F2D /* Preview Assets.xcassets */; };
+		4E3604CA28A2D89900031F2D /* HeyuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3604C928A2D89900031F2D /* HeyuTests.swift */; };
+		4E3604D428A2D89900031F2D /* HeyuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3604D328A2D89900031F2D /* HeyuUITests.swift */; };
+		4E3604D628A2D89900031F2D /* HeyuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3604D528A2D89900031F2D /* HeyuUITestsLaunchTests.swift */; };
+		4E3604E928A2D9EF00031F2D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3604E828A2D9EF00031F2D /* API.swift */; };
+		4E3604EB28A2DA3400031F2D /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3604EA28A2DA3400031F2D /* Posts.swift */; };
+		4E3604ED28A2DF7400031F2D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3604EC28A2DF7400031F2D /* User.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E3604C628A2D89900031F2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E3604AD28A2D89800031F2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E3604B428A2D89800031F2D;
+			remoteInfo = Heyu;
+		};
+		4E3604D028A2D89900031F2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E3604AD28A2D89800031F2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E3604B428A2D89800031F2D;
+			remoteInfo = Heyu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4E3604B528A2D89800031F2D /* Heyu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Heyu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E3604B828A2D89800031F2D /* HeyuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyuApp.swift; sourceTree = "<group>"; };
+		4E3604BA28A2D89800031F2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4E3604BC28A2D89900031F2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E3604BF28A2D89900031F2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4E3604C528A2D89900031F2D /* HeyuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E3604C928A2D89900031F2D /* HeyuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyuTests.swift; sourceTree = "<group>"; };
+		4E3604CF28A2D89900031F2D /* HeyuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E3604D328A2D89900031F2D /* HeyuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyuUITests.swift; sourceTree = "<group>"; };
+		4E3604D528A2D89900031F2D /* HeyuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyuUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4E3604E828A2D9EF00031F2D /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		4E3604EA28A2DA3400031F2D /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		4E3604EC28A2DF7400031F2D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E3604B228A2D89800031F2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E3604C228A2D89900031F2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E3604CC28A2D89900031F2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E3604AC28A2D89800031F2D = {
+			isa = PBXGroup;
+			children = (
+				4E3604B728A2D89800031F2D /* Heyu */,
+				4E3604C828A2D89900031F2D /* HeyuTests */,
+				4E3604D228A2D89900031F2D /* HeyuUITests */,
+				4E3604B628A2D89800031F2D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4E3604B628A2D89800031F2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E3604B528A2D89800031F2D /* Heyu.app */,
+				4E3604C528A2D89900031F2D /* HeyuTests.xctest */,
+				4E3604CF28A2D89900031F2D /* HeyuUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4E3604B728A2D89800031F2D /* Heyu */ = {
+			isa = PBXGroup;
+			children = (
+				4E3604E528A2D96F00031F2D /* View */,
+				4E3604E428A2D96600031F2D /* ViewModel */,
+				4E3604E328A2D96200031F2D /* Model */,
+				4E3604E228A2D95D00031F2D /* Service */,
+				4E3604B828A2D89800031F2D /* HeyuApp.swift */,
+				4E3604BC28A2D89900031F2D /* Assets.xcassets */,
+				4E3604BE28A2D89900031F2D /* Preview Content */,
+			);
+			path = Heyu;
+			sourceTree = "<group>";
+		};
+		4E3604BE28A2D89900031F2D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4E3604BF28A2D89900031F2D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4E3604C828A2D89900031F2D /* HeyuTests */ = {
+			isa = PBXGroup;
+			children = (
+				4E3604C928A2D89900031F2D /* HeyuTests.swift */,
+			);
+			path = HeyuTests;
+			sourceTree = "<group>";
+		};
+		4E3604D228A2D89900031F2D /* HeyuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4E3604D328A2D89900031F2D /* HeyuUITests.swift */,
+				4E3604D528A2D89900031F2D /* HeyuUITestsLaunchTests.swift */,
+			);
+			path = HeyuUITests;
+			sourceTree = "<group>";
+		};
+		4E3604E228A2D95D00031F2D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4E3604E828A2D9EF00031F2D /* API.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4E3604E328A2D96200031F2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E3604EA28A2DA3400031F2D /* Posts.swift */,
+				4E3604EC28A2DF7400031F2D /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E3604E428A2D96600031F2D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4E3604E528A2D96F00031F2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E3604BA28A2D89800031F2D /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4E3604B428A2D89800031F2D /* Heyu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E3604D928A2D89900031F2D /* Build configuration list for PBXNativeTarget "Heyu" */;
+			buildPhases = (
+				4E3604B128A2D89800031F2D /* Sources */,
+				4E3604B228A2D89800031F2D /* Frameworks */,
+				4E3604B328A2D89800031F2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Heyu;
+			productName = Heyu;
+			productReference = 4E3604B528A2D89800031F2D /* Heyu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4E3604C428A2D89900031F2D /* HeyuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E3604DC28A2D89900031F2D /* Build configuration list for PBXNativeTarget "HeyuTests" */;
+			buildPhases = (
+				4E3604C128A2D89900031F2D /* Sources */,
+				4E3604C228A2D89900031F2D /* Frameworks */,
+				4E3604C328A2D89900031F2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E3604C728A2D89900031F2D /* PBXTargetDependency */,
+			);
+			name = HeyuTests;
+			productName = HeyuTests;
+			productReference = 4E3604C528A2D89900031F2D /* HeyuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4E3604CE28A2D89900031F2D /* HeyuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E3604DF28A2D89900031F2D /* Build configuration list for PBXNativeTarget "HeyuUITests" */;
+			buildPhases = (
+				4E3604CB28A2D89900031F2D /* Sources */,
+				4E3604CC28A2D89900031F2D /* Frameworks */,
+				4E3604CD28A2D89900031F2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E3604D128A2D89900031F2D /* PBXTargetDependency */,
+			);
+			name = HeyuUITests;
+			productName = HeyuUITests;
+			productReference = 4E3604CF28A2D89900031F2D /* HeyuUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E3604AD28A2D89800031F2D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					4E3604B428A2D89800031F2D = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					4E3604C428A2D89900031F2D = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 4E3604B428A2D89800031F2D;
+					};
+					4E3604CE28A2D89900031F2D = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 4E3604B428A2D89800031F2D;
+					};
+				};
+			};
+			buildConfigurationList = 4E3604B028A2D89800031F2D /* Build configuration list for PBXProject "Heyu" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4E3604AC28A2D89800031F2D;
+			productRefGroup = 4E3604B628A2D89800031F2D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E3604B428A2D89800031F2D /* Heyu */,
+				4E3604C428A2D89900031F2D /* HeyuTests */,
+				4E3604CE28A2D89900031F2D /* HeyuUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E3604B328A2D89800031F2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E3604C028A2D89900031F2D /* Preview Assets.xcassets in Resources */,
+				4E3604BD28A2D89900031F2D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E3604C328A2D89900031F2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E3604CD28A2D89900031F2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E3604B128A2D89800031F2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E3604BB28A2D89800031F2D /* ContentView.swift in Sources */,
+				4E3604E928A2D9EF00031F2D /* API.swift in Sources */,
+				4E3604B928A2D89800031F2D /* HeyuApp.swift in Sources */,
+				4E3604ED28A2DF7400031F2D /* User.swift in Sources */,
+				4E3604EB28A2DA3400031F2D /* Posts.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E3604C128A2D89900031F2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E3604CA28A2D89900031F2D /* HeyuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E3604CB28A2D89900031F2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E3604D428A2D89900031F2D /* HeyuUITests.swift in Sources */,
+				4E3604D628A2D89900031F2D /* HeyuUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4E3604C728A2D89900031F2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E3604B428A2D89800031F2D /* Heyu */;
+			targetProxy = 4E3604C628A2D89900031F2D /* PBXContainerItemProxy */;
+		};
+		4E3604D128A2D89900031F2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E3604B428A2D89800031F2D /* Heyu */;
+			targetProxy = 4E3604D028A2D89900031F2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4E3604D728A2D89900031F2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4E3604D828A2D89900031F2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4E3604DA28A2D89900031F2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Heyu/Preview Content\"";
+				DEVELOPMENT_TEAM = V7GM8G5V55;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.joao.ipiraja.Heyu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4E3604DB28A2D89900031F2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Heyu/Preview Content\"";
+				DEVELOPMENT_TEAM = V7GM8G5V55;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.joao.ipiraja.Heyu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4E3604DD28A2D89900031F2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7GM8G5V55;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.joao.ipiraja.HeyuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Heyu.app/Heyu";
+			};
+			name = Debug;
+		};
+		4E3604DE28A2D89900031F2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7GM8G5V55;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.joao.ipiraja.HeyuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Heyu.app/Heyu";
+			};
+			name = Release;
+		};
+		4E3604E028A2D89900031F2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7GM8G5V55;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.joao.ipiraja.HeyuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Heyu;
+			};
+			name = Debug;
+		};
+		4E3604E128A2D89900031F2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7GM8G5V55;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.joao.ipiraja.HeyuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Heyu;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E3604B028A2D89800031F2D /* Build configuration list for PBXProject "Heyu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E3604D728A2D89900031F2D /* Debug */,
+				4E3604D828A2D89900031F2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E3604D928A2D89900031F2D /* Build configuration list for PBXNativeTarget "Heyu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E3604DA28A2D89900031F2D /* Debug */,
+				4E3604DB28A2D89900031F2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E3604DC28A2D89900031F2D /* Build configuration list for PBXNativeTarget "HeyuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E3604DD28A2D89900031F2D /* Debug */,
+				4E3604DE28A2D89900031F2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E3604DF28A2D89900031F2D /* Build configuration list for PBXNativeTarget "HeyuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E3604E028A2D89900031F2D /* Debug */,
+				4E3604E128A2D89900031F2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4E3604AD28A2D89800031F2D /* Project object */;
+}
