@@ -1,17 +1,24 @@
 
 import Foundation
 
-struct Post{
+
+//try JSONDecoder().decode([Post].self, from:data)
+
+struct Post {
     
+    
+    var content:String?
+    var media: URL?
     var likeCount: Int
-    var media: String
     var userId: String
     var id: String
     var createdAt: Date
     var updatedAt: Date
+    
 }
 
 extension Post: Decodable{
+    
     
     enum CodingKeys: String, CodingKey {
            case likeCount = "like_count"
@@ -20,14 +27,22 @@ extension Post: Decodable{
            case id
            case createdAt = "created_at"
            case updatedAt = "updated_at"
+           case content
           
     }
     
     init(from decoder: Decoder) throws{
         
         let values = try decoder.container(keyedBy: CodingKeys.self)
+        
         likeCount = try values.decode(Int.self, forKey: .likeCount)
-        media = try values.decode(String.self, forKey: .media)
+        
+        content = try values.decode(String.self, forKey: .content)
+        
+        if let mediaString = try? values.decode(String.self, forKey: .media) {
+            media = URL(string: API.domain + mediaString)
+        }
+
         userId = try values.decode(String.self, forKey: .userId)
         id = try values.decode(String.self, forKey: .id)
         
@@ -37,7 +52,8 @@ extension Post: Decodable{
         createdAt = dateFormatter.date(from: createdAtString)!
         
         let updatedAtString = try values.decode(String.self, forKey: .updatedAt)
-        updatedAt = dateFormatter.date(from: updatedAtString ?? "")!
+        
+        updatedAt = dateFormatter.date(from: updatedAtString)!
         
     }
 }
@@ -47,3 +63,5 @@ extension Post: Equatable{
         return lhs.id == rhs.id
     }
 }
+
+

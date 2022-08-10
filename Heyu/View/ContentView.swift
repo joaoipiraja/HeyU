@@ -8,9 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var posts: [Post] = []
+    @State var isLoaded: Bool = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack{
+            
+            if isLoaded{
+                Text(posts[1].content ?? "")
+                    .padding()
+            }else{
+                ProgressView(label: {
+                    Text("Loading")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                    }
+                ).progressViewStyle(CircularProgressViewStyle())
+            }
+            
+        }.task{
+            posts = await API.getPosts()
+            isLoaded = true
+        }
+        
     }
 }
 

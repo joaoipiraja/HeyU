@@ -1,14 +1,17 @@
 import Darwin
+import Foundation
 
 struct User{
     var name:String
     var email:String
     var id:String
+    var avatar:URL?
     
     enum CodingKeys: String, CodingKey {
            case name
            case email
            case id
+           case avatar
     }
 }
 
@@ -19,6 +22,8 @@ extension User: Decodable{
         name = try values.decode(String.self, forKey: .name)
         email = try values.decode(String.self, forKey: .email)
         id = try values.decode(String.self, forKey: .id)
+        let avatarString = try values.decode(String.self, forKey: .avatar)
+        avatar = URL(string: API.domain + avatarString)
     }
 }
 
