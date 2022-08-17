@@ -9,19 +9,26 @@ struct Post {
     
     var content:String?
     var media: URL?
-    var likeCount: Int
+    var likes: [User]
     var userId: String
+    var user: User?
+    var isLikedByUser: Bool 
     var id: String
     var createdAt: Date
     var updatedAt: Date
     
 }
 
+extension Post: Hashable{
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.id)
+    }
+}
+
 extension Post: Decodable{
     
     
     enum CodingKeys: String, CodingKey {
-           case likeCount = "like_count"
            case media
            case userId = "user_id"
            case id
@@ -34,8 +41,6 @@ extension Post: Decodable{
     init(from decoder: Decoder) throws{
         
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        
-        likeCount = try values.decode(Int.self, forKey: .likeCount)
         
         content = try values.decode(String.self, forKey: .content)
         
@@ -54,14 +59,16 @@ extension Post: Decodable{
         let updatedAtString = try values.decode(String.self, forKey: .updatedAt)
         
         updatedAt = dateFormatter.date(from: updatedAtString)!
-        
+     
+//        user = nil
+        likes = []
     }
 }
 
-extension Post: Equatable{
-    static func ==(lhs: Post, rhs: Post) -> Bool{
-        return lhs.id == rhs.id
-    }
-}
+//extension Post: Equatable{
+//    static func ==(lhs: Post, rhs: Post) -> Bool{
+//        return lhs.id == rhs.id
+//    }
+//}
 
 

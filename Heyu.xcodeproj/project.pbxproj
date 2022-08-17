@@ -17,6 +17,11 @@
 		4E3604E928A2D9EF00031F2D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3604E828A2D9EF00031F2D /* API.swift */; };
 		4E3604EB28A2DA3400031F2D /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3604EA28A2DA3400031F2D /* Posts.swift */; };
 		4E3604ED28A2DF7400031F2D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3604EC28A2DF7400031F2D /* User.swift */; };
+		4E3604F128AA6AC000031F2D /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3604F028AA6AC000031F2D /* Home.swift */; };
+		4E3604F328AA8CAB00031F2D /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3604F228AA8CAB00031F2D /* PostView.swift */; };
+		4E3604F528ABBB7300031F2D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3604F428ABBB7300031F2D /* LoginView.swift */; };
+		4E70A58528AD1827002CC3DB /* KeyChainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E70A58428AD1827002CC3DB /* KeyChainStorage.swift */; };
+		4ED1BD6428AD19780062AB2A /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 4ED1BD6328AD19780062AB2A /* KeychainAccess */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,11 @@
 		4E3604E828A2D9EF00031F2D /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4E3604EA28A2DA3400031F2D /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		4E3604EC28A2DF7400031F2D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4E3604F028AA6AC000031F2D /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		4E3604F228AA8CAB00031F2D /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		4E3604F428ABBB7300031F2D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4E3604F828ABC13600031F2D /* Heyu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Heyu.entitlements; sourceTree = "<group>"; };
+		4E70A58428AD1827002CC3DB /* KeyChainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ED1BD6428AD19780062AB2A /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +111,7 @@
 		4E3604B728A2D89800031F2D /* Heyu */ = {
 			isa = PBXGroup;
 			children = (
+				4E3604F828ABC13600031F2D /* Heyu.entitlements */,
 				4E3604E528A2D96F00031F2D /* View */,
 				4E3604E428A2D96600031F2D /* ViewModel */,
 				4E3604E328A2D96200031F2D /* Model */,
@@ -140,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				4E3604E828A2D9EF00031F2D /* API.swift */,
+				4E70A58428AD1827002CC3DB /* KeyChainStorage.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -164,6 +177,9 @@
 			isa = PBXGroup;
 			children = (
 				4E3604BA28A2D89800031F2D /* ContentView.swift */,
+				4E3604F028AA6AC000031F2D /* Home.swift */,
+				4E3604F228AA8CAB00031F2D /* PostView.swift */,
+				4E3604F428ABBB7300031F2D /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +200,9 @@
 			dependencies = (
 			);
 			name = Heyu;
+			packageProductDependencies = (
+				4ED1BD6328AD19780062AB2A /* KeychainAccess */,
+			);
 			productName = Heyu;
 			productReference = 4E3604B528A2D89800031F2D /* Heyu.app */;
 			productType = "com.apple.product-type.application";
@@ -256,6 +275,9 @@
 				Base,
 			);
 			mainGroup = 4E3604AC28A2D89800031F2D;
+			packageReferences = (
+				4ED1BD6228AD19780062AB2A /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 4E3604B628A2D89800031F2D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -298,11 +320,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3604F328AA8CAB00031F2D /* PostView.swift in Sources */,
 				4E3604BB28A2D89800031F2D /* ContentView.swift in Sources */,
 				4E3604E928A2D9EF00031F2D /* API.swift in Sources */,
 				4E3604B928A2D89800031F2D /* HeyuApp.swift in Sources */,
 				4E3604ED28A2DF7400031F2D /* User.swift in Sources */,
+				4E3604F128AA6AC000031F2D /* Home.swift in Sources */,
+				4E3604F528ABBB7300031F2D /* LoginView.swift in Sources */,
 				4E3604EB28A2DA3400031F2D /* Posts.swift in Sources */,
+				4E70A58528AD1827002CC3DB /* KeyChainStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +484,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Heyu/Heyu.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Heyu/Preview Content\"";
@@ -487,6 +514,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Heyu/Heyu.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Heyu/Preview Content\"";
@@ -627,6 +655,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4ED1BD6228AD19780062AB2A /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4ED1BD6328AD19780062AB2A /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4ED1BD6228AD19780062AB2A /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4E3604AD28A2D89800031F2D /* Project object */;
 }

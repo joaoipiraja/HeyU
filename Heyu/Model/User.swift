@@ -22,8 +22,9 @@ extension User: Decodable{
         name = try values.decode(String.self, forKey: .name)
         email = try values.decode(String.self, forKey: .email)
         id = try values.decode(String.self, forKey: .id)
-        let avatarString = try values.decode(String.self, forKey: .avatar)
-        avatar = URL(string: API.domain + avatarString)
+        if let avatarString = try? values.decode(String.self, forKey: .avatar) {
+            avatar = URL(string: API.domain + avatarString)
+        }
     }
 }
 
