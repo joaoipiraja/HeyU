@@ -53,31 +53,68 @@ struct ImagePicker: UIViewControllerRepresentable {
 
 struct ContentView: View {
     
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     @State var posts: [Post] = []
-    @State var isLoaded: Bool = false
     @State var imageSelected: UIImage?
     @State var showImagePicker:Bool = false
-    
+    @State private var textEditor: String = ""
+    @State private var isSended: Bool = false
+    @State private var isLoading: Bool = false
+
     var body: some View {
         
         VStack{
-            if let image = imageSelected{
-                Image(uiImage: image).resizable().aspectRatio(2.0, contentMode: .fill)
-            }
+                    
+            if !isLoading{
+                
             
             Button {
                 showImagePicker = true
             } label: {
-                Text("Abrir Image picker")
+                
+                if let image = imageSelected{
+                    Image(uiImage: image).resizable().aspectRatio(2.0, contentMode: .fill)
+                }else{
+                    Text("Abrir Image picker")
+                }
+               
+            }
+            
+            TextEditor(text: $textEditor).textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            Button(action: {
+                isSended = true
+                isLoading = true
+                
+            }) {
+                Text("Bordered")
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
+            }
+            
+            }else{
+                ProgressView(label: {
+                    Text("Loading")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                    }
+                ).progressViewStyle(CircularProgressViewStyle())
             }
 
             
-        }.task {
-            if let image = imageSelected{
-                print("feito s")
-                await API.createPost(imageData: image.pngData() , content: "Teste")
-            }
+        }.task(id: isSended) {
             
+            if isSended{
+                if !textEditor .isEmpty {
+                    if let image = imageSelected{
+                        print(await API.createPost(imageData: image.pngData(), content: textEditor))
+                    }else{
+                        print(await API.createPost(content: textEditor))
+                    }
+                }
+                viewRouter.currentPage = .home
+            }
         }
         
         .sheet(isPresented: $showImagePicker){
@@ -88,7 +125,8 @@ struct ContentView: View {
                
                 
             }
-        }
+        }.padding(50)
+       
         
 //        ZStack{
 //            if isLoaded{

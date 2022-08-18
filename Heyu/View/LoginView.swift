@@ -32,10 +32,11 @@ struct LoginModel: Encodable, Decodable, Equatable {
 
 struct LoginView: View {
     
-    @State private var text: String = ""
-    @State private var password: String = ""
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     @State private var modelSignUp: LoginModel?
     @State private var modelSignIn: LoginModel?
+    
     @State private var isFinished:Bool = true
     @KeychainStorage("Token") var token
 
@@ -45,13 +46,13 @@ struct LoginView: View {
     }
     
     
-    
     func handle(_ authResult: Result<ASAuthorization, Error>){
         switch authResult{
         case .success(let auth):
             isFinished = false
             print(auth)
             switch auth.credential{
+                
             case let appleIdCredentials as ASAuthorizationAppleIDCredential:
                 if let loginModel = LoginModel(credentials: appleIdCredentials){
                    if let loginModelData = try? JSONEncoder().encode(loginModel){
@@ -80,6 +81,8 @@ struct LoginView: View {
         
     }
     
+    
+    
     var body: some View {
         ZStack{
             
@@ -105,7 +108,7 @@ struct LoginView: View {
                 
                 if let token = await API.loginUser(model: modelSignIn) {
                     self.token = token
-                    
+                    self.viewRouter.currentPage = .createContent
                 }
                 
                 isFinished = true
@@ -119,6 +122,7 @@ struct LoginView: View {
                 
                 if let token = await API.createUser(model:  modelSignUp){
                     self.token = token
+                    self.viewRouter.currentPage = .createContent
                 }
                 
                 isFinished = true

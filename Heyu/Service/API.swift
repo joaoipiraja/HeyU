@@ -6,10 +6,32 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct API{
+    
     static let domain = "http://adaspace.local/"
     @KeychainStorage("Token") static var mockToken
+    
+    
+    static func setLike(postId: String) async{
+        
+        var urlRequest = URLRequest(url: URL(string: "http://adaspace.local/likes")!)
+        
+        urlRequest.setValue( "Bearer \(mockToken)", forHTTPHeaderField: "Authorization")
+        
+        print("setLikes -> \(mockToken)")
+        
+        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+                   let statusCode = (response as? HTTPURLResponse)?.statusCode ?? 0
+                   if case (200..<300) = statusCode{
+                       print("Deu certo - setLike")
+                   }
+                 // handle the response here
+               }.resume()
+               
+        
+    }
     
     static func getLikes(postId: String) async -> [User] {
         var urlRequest = URLRequest(url: URL(string: "http://adaspace.local/likes/liking_users/\(postId)")!)
@@ -25,6 +47,9 @@ struct API{
     }
     
     static func getUser(userId: String) async -> User? {
+        
+        print("getUser -> \(mockToken)")
+        
         var urlRequest = URLRequest(url: URL(string: "http://adaspace.local/users/\(userId)")!)
         
         do {
@@ -117,7 +142,7 @@ struct API{
 //            "x-api-key": "5cffc6c8-0e59-497e-a9ef-d1b266411e9c"
 //        ]
         
-      
+      print("getPosts -> \(mockToken)")
         
 
         do {
@@ -132,9 +157,11 @@ struct API{
         return []
     }
     
-    static func createPost(imageData:Data?, content:String) async {
+    static func createPost(imageData:Data? = nil, content:String) async{
         
         let boundary = "Boundary-\(UUID().uuidString)"
+        
+        print("createPost -> \(mockToken)")
         
         var urlRequest = URLRequest(url: URL(string: API.domain + "posts")!)
         urlRequest.httpMethod = "POST"
@@ -157,14 +184,23 @@ struct API{
         httpBody.appendString("--\(boundary)--")
 
         urlRequest.httpBody = httpBody as Data
+        
+//        if let imageData = imageData {
+//            let task = URLSession.shared.uploadTask(with: urlRequest, from: imageData)
+//        }
+        
 
         URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            let statusCode = (response as? HTTPURLResponse)?.statusCode ?? 0
-            if case (200..<300) = statusCode{
-                print("Deu certo")
-            }
-          // handle the response here
-        }.resume()
+                   let statusCode = (response as? HTTPURLResponse)?.statusCode ?? 0
+                   if case (200..<300) = statusCode{
+                       print("Deu certo - Create Post")
+                   }else{
+                       print("Deu errado - Create Post")
+                       print(String(data: data!, encoding: .utf8)!)
+                   }
+                 // handle the response here
+               }.resume()
+               
         
     }
     

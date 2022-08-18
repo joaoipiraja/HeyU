@@ -82,9 +82,8 @@ struct PostView: View {
                             isLikeAnimation = true
                             hideAnimation()
                         }
-                    
                 
-                    Image("heart")
+                    Image("white-heart")
                         .resizable()
                         .scaledToFill()
                         .frame(width: 170, height: 170)
@@ -129,7 +128,14 @@ struct PostView: View {
             
            
             
-        }//: VSTACK
+        }.task(id:isLiked) {
+            if(isLiked){
+                print("Task Post View")
+                await API.setLike(postId: postData.id)
+            }
+            //
+        }
+    //: VSTACK
     }
 }
 
@@ -139,7 +145,7 @@ struct PostView_Previews: PreviewProvider {
     static var previews: some View {
         
         
-            let posts = Array(repeating: Post(content: "Teste", media: URL(string: "https://www.contentviewspro.com/wp-content/uploads/2017/07/default_image.png"), likes: [], userId: "", id: "", createdAt: Date.now, updatedAt: Date.now), count: 20)
+        let posts = Array(repeating: Post(content: "Teste", media: URL(string: "https://www.contentviewspro.com/wp-content/uploads/2017/07/default_image.png"), likes: [], userId: "", isLikedByUser: false, id: "", createdAt: Date.now, updatedAt: Date.now), count: 20)
         
         
         PostView(postData: posts[0])

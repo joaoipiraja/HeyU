@@ -12,7 +12,7 @@ struct Post {
     var likes: [User]
     var userId: String
     var user: User?
-    var isLikedByUser: Bool 
+    var isLikedByUser: Bool
     var id: String
     var createdAt: Date
     var updatedAt: Date
@@ -60,8 +60,10 @@ extension Post: Decodable{
         
         updatedAt = dateFormatter.date(from: updatedAtString)!
      
-//        user = nil
+        user = nil
         likes = []
+        isLikedByUser = false
+        
     }
 }
 
