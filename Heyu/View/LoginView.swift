@@ -9,26 +9,24 @@ import SwiftUI
 import AuthenticationServices
 import Foundation
 
-struct LoginModel: Encodable, Decodable, Equatable {
-    var email: String
-    var password: String
-    var name: String
+//Pick the icon
+extension Bundle {
+  
+  var icon: UIImage? {
     
-    init?(credentials: ASAuthorizationAppleIDCredential){
-        
-        guard
-            let name = credentials.fullName?.givenName,
-            let email = credentials.email
-        else {
-            return nil
-        }
-        
-        self.password = credentials.user
-        self.email = email
-        self.name = name
-        
+    if let icons = infoDictionary?["CFBundleIcons"] as? [String: Any],
+       let primary = icons["CFBundlePrimaryIcon"] as? [String: Any],
+       let files = primary["CFBundleIconFiles"] as? [String],
+       let icon = files.last
+    {
+      return UIImage(named: icon)
     }
+    
+    return nil
+  }
 }
+
+
 
 struct LoginView: View {
     
@@ -88,8 +86,13 @@ struct LoginView: View {
             
             if isFinished{
                 
-                SignInWithAppleButton(.signIn,
-                    onRequest: configure, onCompletion: handle).signInWithAppleButtonStyle(.black).frame(width: 200, height: 44, alignment: .center)
+                VStack(alignment: .center){
+                    Image(uiImage: Bundle.main.icon ?? UIImage()).padding([.bottom], 100)
+                    SignInWithAppleButton(.signIn,
+                        onRequest: configure, onCompletion: handle).signInWithAppleButtonStyle(.black).frame(width: 200, height: 44, alignment: .center)
+                }
+                
+               
                
             }else{
                 ProgressView(label: {

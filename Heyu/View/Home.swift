@@ -13,6 +13,8 @@ struct Home: View {
     @State var posts: [Post] = []
     @State var isReloaded: Bool = false
     
+    @State var usersById: [String: User] = [:]
+    
     var body: some View {
         
         ZStack{
@@ -20,17 +22,22 @@ struct Home: View {
                 RefreshableScrollView {
                     ForEach($posts, id: \.self){ $post in
                         PostView(postData: post)
-                            .border(.purple)
                             .task {
+                                guard post.user == nil else { return }
                                 
-                                    let user = await API.getUser(userId: post.userId)
-                                    let likes = await API.getLikes(postId: post.id)
-                                    
+                                if let user = usersById[post.userId] {
+                                    print("cached user")
                                     post.user = user
-                                    post.likes = likes
+                                } else {
+                                    print("downloaded user")
+                                    let user = await API.getUser(userId: post.userId)
+                                    usersById[post.userId] = user
+                                    post.user = user
+                                }
                                 
+                                let likes = await API.getLikes(postId: post.id)
                                 
-                
+                                post.likes = likes
                             }
                     }.padding([.bottom], 50)
                         .padding([.leading, .trailing], 20)
@@ -47,9 +54,9 @@ struct Home: View {
                 }
                 ).progressViewStyle(CircularProgressViewStyle())
             }
-        }.task(id: isReloaded) {
-                posts = await API.getPosts()
-            
+        }
+        .task(id: isReloaded) {
+            posts = await Array(API.getPosts().prefix(10))
         }
     }
 }

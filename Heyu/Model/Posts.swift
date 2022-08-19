@@ -2,7 +2,6 @@
 import Foundation
 
 
-//try JSONDecoder().decode([Post].self, from:data)
 
 struct Post {
     

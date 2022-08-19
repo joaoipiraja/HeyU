@@ -24,6 +24,7 @@
 		4ED1BD6428AD19780062AB2A /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 4ED1BD6328AD19780062AB2A /* KeychainAccess */; };
 		4ED1BD6628AE620B0062AB2A /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED1BD6528AE620B0062AB2A /* ViewRouter.swift */; };
 		4ED1BD6828AE7C680062AB2A /* RefreshableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED1BD6728AE7C680062AB2A /* RefreshableScrollView.swift */; };
+		4ED1BD6A28AFAA120062AB2A /* AppleIdLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED1BD6928AFAA120062AB2A /* AppleIdLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		4E70A58428AD1827002CC3DB /* KeyChainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainStorage.swift; sourceTree = "<group>"; };
 		4ED1BD6528AE620B0062AB2A /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		4ED1BD6728AE7C680062AB2A /* RefreshableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableScrollView.swift; sourceTree = "<group>"; };
+		4ED1BD6928AFAA120062AB2A /* AppleIdLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleIdLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			children = (
 				4E3604EA28A2DA3400031F2D /* Posts.swift */,
 				4E3604EC28A2DF7400031F2D /* User.swift */,
+				4ED1BD6928AFAA120062AB2A /* AppleIdLogin.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				4E3604F128AA6AC000031F2D /* Home.swift in Sources */,
 				4E3604F528ABBB7300031F2D /* LoginView.swift in Sources */,
 				4E3604EB28A2DA3400031F2D /* Posts.swift in Sources */,
+				4ED1BD6A28AFAA120062AB2A /* AppleIdLogin.swift in Sources */,
 				4E70A58528AD1827002CC3DB /* KeyChainStorage.swift in Sources */,
 				4ED1BD6828AE7C680062AB2A /* RefreshableScrollView.swift in Sources */,
 			);

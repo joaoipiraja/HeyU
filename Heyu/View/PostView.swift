@@ -17,22 +17,13 @@ struct PostView: View {
     @State private var isLikeAnimation: Bool = false
     @State private var isMute: Bool = true
     
-   
-    let user = User(name: "João", email: "joao", id: "01", avatar: URL(string: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"))
-    // MARK:- FUNCTION
-    
+      
     func hideAnimation(){
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
             isLikeAnimation = false
         }
     }
-    
-    func estimatedHeight(_ width:Float , _ height: Float) -> CGFloat {
-        let ratio = CGFloat(height) / CGFloat(width)
-        let estimatedH = ratio * UIScreen.main.bounds.width
-        return estimatedH
-    }
-    
+  
     // MARK:- BODY
     
     var body: some View {
@@ -128,7 +119,8 @@ struct PostView: View {
             
            
             
-        }.task(id:isLiked) {
+        }
+        .task(id: isLiked) {
             if(isLiked){
                 print("Task Post View")
                 await API.setLike(postId: postData.id)

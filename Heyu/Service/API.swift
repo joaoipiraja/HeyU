@@ -41,7 +41,9 @@ struct API{
             let usersDecoded = try JSONDecoder().decode([User].self, from: data)
             return usersDecoded
         } catch {
-            print(error)
+            if error.localizedDescription != "cancelled" {
+                print(error)
+            }
         }
         return []
     }
@@ -57,6 +59,7 @@ struct API{
             let userDecoded = try JSONDecoder().decode(User.self, from: data)
             return userDecoded
         } catch {
+            
             print(error)
         }
         return nil
